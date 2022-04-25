@@ -1,0 +1,342 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+h1,
+h2,
+h3,
+span {
+  cursor: default;
+}
+body {
+  font-family: sans-serif;
+  overflow-x: hidden;
+  margin: 0 auto;
+  max-width: 1920px;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: #ccc;
+}
+.main-page {
+  margin-left: 230px;
+  padding: 15px;
+  padding-bottom: 90px;
+}
+.main-page .menu-burger {
+  cursor: pointer;
+  width: 30px;
+  display: none;
+}
+.main-page .menu-burger img {
+  width: 100%;
+}
+@media screen and (max-width: 800px) {
+  .main-page .menu-burger {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .main-page {
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main-page {
+    margin-left: 0;
+  }
+}
+.statistics {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.statistics div {
+  background: #e6e6e6;
+  width: 23%;
+  padding: 15px;
+  box-shadow: 5px 5px 5px gray;
+  border-radius: 3px;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  .statistics div {
+    width: 48%;
+  }
+  .statistics div:nth-of-type(-n+2) {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .statistics div {
+    width: 100%;
+  }
+  .statistics div:nth-of-type(-n+3) {
+    margin-bottom: 40px;
+  }
+}
+.statistics div > img {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  padding: 10px;
+  position: absolute;
+  left: 15px;
+  top: -15px;
+  vertical-align: middle;
+  border-radius: 3px;
+}
+.statistics div a > span {
+  cursor: pointer;
+}
+.statistics .space > img {
+  background: green;
+}
+.statistics .revenue > img {
+  background: orange;
+}
+.statistics .issues > img {
+  background: blue;
+}
+.statistics .followers > img {
+  background: red;
+}
+.statistics div > span {
+  color: gray;
+  font-size: 0.8rem;
+  text-align: right;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.statistics h2 {
+  margin: 10px 0;
+  font-weight: normal;
+  text-align: right;
+}
+.statistics a {
+  width: 110%;
+  text-decoration: none;
+  color: gray;
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 23px;
+}
+.statistics a:hover {
+  text-decoration: underline;
+  color: black;
+}
+.statistics a > img {
+  vertical-align: -5px;
+  margin-right: 5px;
+}
+hr {
+  border-bottom: 1px gray solid;
+}
+.chart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.chart div {
+  margin-top: 50px;
+  background: #e6e6e6;
+  width: 31%;
+  padding: 15px;
+  box-shadow: 5px 5px 5px gray;
+  border-radius: 3px;
+  position: relative;
+}
+@media screen and (max-width: 650px) {
+  .chart div {
+    width: 100%;
+  }
+}
+.chart h3 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.chart hr {
+  margin: 15px 0;
+}
+.chart img:nth-of-type(1) {
+  width: 100%;
+  border-radius: 3px;
+  position: relative;
+  top: -30px;
+  margin-bottom: -30px;
+}
+.chart .sales > img:nth-of-type(1) {
+  background: green;
+}
+.chart .sbscr > img:nth-of-type(1) {
+  background: orange;
+}
+.chart .tasks > img:nth-of-type(1) {
+  background: blue;
+}
+.chart img:nth-of-type(2) {
+  width: 15px;
+  margin-right: 10px;
+  float: left;
+  margin-top: 3px;
+}
+.chart span:nth-of-type(2) {
+  color: gray;
+  font-size: 14px;
+}
+.bottom-stats {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.bottom-stats > div {
+  background: #e6e6e6;
+  width: 48%;
+  padding: 15px;
+  box-shadow: 5px 5px 5px gray;
+  border-radius: 3px;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  .bottom-stats > div {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+.bottom-stats .tasks-title {
+  color: white;
+  background: orange;
+  padding: 10px;
+  padding-bottom: 20px;
+  padding-right: 0;
+  border-radius: 3px;
+  position: relative;
+  top: -30px;
+}
+.bottom-stats .tasks-title::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.bottom-stats .tasks-title > span {
+  float: left;
+  margin-top: 13px;
+}
+.bottom-stats .tasks-title .active {
+  background: rgba(255, 255, 255, 0.3);
+}
+.bottom-stats .tasks-title ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+.bottom-stats .tasks-title li {
+  margin-top: 10px;
+}
+.bottom-stats .tasks-title li img {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.bottom-stats .tasks-title a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 5px;
+}
+.bottom-stats .tasks-title a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.bottom-stats .tasks hr {
+  margin: 10px 0;
+}
+.bottom-stats .tasks label {
+  width: calc(100% - 100px);
+  display: inline-block;
+  vertical-align: middle;
+  color: gray;
+  font-size: 0.8rem;
+}
+.bottom-stats .tasks img {
+  width: 20px;
+  margin: 0 5px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.bottom-stats .stats table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.bottom-stats .stats table th {
+  color: #00a08e;
+  padding-bottom: 10px;
+}
+.bottom-stats .stats table tr {
+  margin: 10px;
+}
+.bottom-stats .stats table td {
+  text-align: center;
+  border-top: 1px gray solid;
+  padding: 10px;
+  color: gray;
+}
+.bottom-stats .stats-title {
+  width: 100%;
+  background: blue;
+  position: relative;
+  top: -30px;
+  color: white;
+  border-radius: 3px;
+  padding: 10px;
+  line-height: 1.5;
+}
+input[type="checkbox"] {
+  margin: 5px;
+}
+.footer {
+  margin-top: 20px;
+  border-top: gray 2px solid;
+  padding: 20px 15px;
+  position: fixed;
+  bottom: 0;
+  background: #ccc;
+  width: calc(100% - 230px);
+  margin-left: -15px;
+}
+@media screen and (max-width: 1000px) {
+  .footer {
+    position: static;
+    width: calc(100% + 30px);
+  }
+}
+.footer ul {
+  list-style-type: none;
+  justify-content: space-around;
+  display: inline-block;
+}
+.footer ul li {
+  display: inline;
+  margin-right: 20px;
+}
+.footer ul a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+.footer span {
+  float: right;
+}
+@media screen and (max-width: 850px) {
+  .footer span {
+    display: block;
+    float: none;
+    margin-top: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
